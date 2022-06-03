@@ -10,16 +10,14 @@ const names = ["Halo", "Angel", "Nyoman", "Ketut", "Aisyah"];
 // "2. Nama"
 // ...
 const sorter = (names, sort) => {
-  //setTimeout(() => {
     const sorted = sort(names);
+    
     names = [];
     for (let index = 0; index < sorted.length; index++) {
       names.push( index+1 + ". " + sorted[index]);
     }    
 
     return names;
-  //}, 1000);
-
 };
 
 // TODO: Fungsi untuk mengurutkan array of string secara ascending
