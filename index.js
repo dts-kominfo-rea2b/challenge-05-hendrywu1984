@@ -1,3 +1,6 @@
+const { doesNotReject } = require("assert");
+const { log } = require("console");
+
 const names = ["Halo", "Angel", "Nyoman", "Ketut", "Aisyah"];
 
 // TODO: Fungsi utama
@@ -6,15 +9,30 @@ const names = ["Halo", "Angel", "Nyoman", "Ketut", "Aisyah"];
 // "1. Nama"
 // "2. Nama"
 // ...
-const sorter = null;
+const sorter = (names, sort) => {
+  //setTimeout(() => {
+    const sorted = sort(names);
+    names = [];
+    for (let index = 0; index < sorted.length; index++) {
+      names.push( index+1 + ". " + sorted[index]);
+    }    
+
+    return names;
+  //}, 1000);
+
+};
 
 // TODO: Fungsi untuk mengurutkan array of string secara ascending
 // mengembalikan array yang sudah diurutkan
-const sortAscending = null;
+const sortAscending = (data) => {
+  return data.sort();
+};
 
 // TODO: Fungsi untuk mengurutkan array of string secara descending
 // mengembalikan array yang sudah diurutkan
-const sortDescending = null;
+const sortDescending = (data) => {
+  return data.sort().reverse();
+};
 
 // ! JANGAN DIMODIFIKASI
 (function main() {
